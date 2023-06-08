@@ -1,0 +1,245 @@
+html {
+	scroll-behavior: smooth;
+	background-color: #FDF5F5 !important;
+}
+
+body {
+	transition: all 0.9s ease-in-out !important;
+}
+
+.fixed-top {
+	transition: all 0.4s ease-in-out !important;
+	z-index: 999999999999;
+}
+
+nav img {
+	width: 160px;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+
+}
+
+input {
+	border: none;
+	outline: none;
+}
+
+.form-control {
+	border: none !important;
+	outline: none !important;
+}
+
+button {
+	border: none !important;
+	outline: none !important;
+}
+
+.form-control:focus {
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+input {
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+nav ul li {
+	padding: 0 8px;
+}
+
+nav ul li a {
+	color: #1E1E24;
+	font-size: 0.99rem;
+	transition: all 0.4s ease-in-out;
+	font-weight: 400;
+
+}
+
+nav ul li a:hover {
+	color: #d00000;
+	transition: all 0.4s ease-in-out;
+}
+
+nav ul li .active {
+	color: #d00000;
+}
+
+#secondBar {
+	top: 100px !important;
+	background-color: transparent !important;
+	color: white !important;
+	height: auto;
+	overflow: hidden !important;
+	z-index: 99999999 !important;
+	transition: all 0.4s ease-in-out !important;
+}
+
+#secondBar p {
+	font-size: 0.99rem;
+}
+
+#animate {
+	padding-left: 10px;
+	animation: movingTopToBottom 5s linear infinite;
+	position: relative;
+	animation-duration: 5s;
+
+}
+
+@keyframes movingTopToBottom {
+	0% {
+		top: -15px;
+	}
+
+	100% {
+		top: 50px;
+	}
+
+
+}
+
+.view {
+	border: 2px solid white;
+	color: white;
+	width: 100px;
+	text-align: center;
+	border-radius: 8px;
+}
+
+.view:hover {
+
+	color: white;
+
+}
+
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+h1 {
+	font-size: 2.625rem;
+}
+
+p {
+	font-size: 0.938rem;
+}
+
+a {
+	font-size: 0.938rem;
+}
+
+.swiper-pagination-bullet {
+	background-color: #d00000;
+	opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+	width: 30px;
+	border-radius: 5px;
+	background-color: rgb(208, 0, 0) !important;
+	opacity: 0.8;
+}
+
+/* News Ticker */
+/* (A) STANDARD ROW HEIGHT */
+.vwrap,
+.vitem {
+	height: 30px;
+	line-height: 20px;
+}
+
+/* (B) FIXED WRAPPER */
+.vwrap {
+	overflow: hidden;
+	/* HIDE SCROLL BAR */
+	background: transparent;
+}
+
+/* (C) TICKER ITEMS */
+.vitem {
+	text-align: left;
+	padding-left: 10px;
+}
+
+/* (D) ANIMATION - MOVE ITEMS FROM TOP TO BOTTOM */
+/* CHANGE KEYFRAMES IF YOU ADD/REMOVE ITEMS */
+.vmove {
+	position: relative;
+}
+
+@keyframes tickerv {
+	0% {
+		bottom: 0;
+	}
+
+	/* FIRST ITEM */
+	30% {
+		bottom: 30px;
+	}
+
+	/* SECOND ITEM */
+	60% {
+		bottom: 60px;
+	}
+
+	/* THIRD ITEM */
+	90% {
+		bottom: 90px;
+	}
+
+	/* FORTH ITEM */
+	100% {
+		bottom: 0;
+	}
+
+	/* BACK TO FIRST */
+}
+
+.vmove {
+	animation-name: tickerv;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(1, 0, .5, 0);
+}
+
+.vmove:hover {
+	animation-play-state: paused;
+}
+
+.color {
+	background: rgb(212, 6, 6);
+	background: linear-gradient(157deg, rgba(212, 6, 6, 1) 0%, rgba(55, 28, 113, 1) 100%);
+}
